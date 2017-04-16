@@ -2,19 +2,18 @@ var data = {
   init: function(){},
   set: function(property, data){
     data.model[property] = data;
-    //refresh view
+    data.updateView();
   },
   get: function(property){
     return data.model[property];
   },
+  updateView: function(){
+    for(prop in data.model){
+      data.view[prop] = data.model[prop];
+    }
+  },
   model:{
-    users: [
-      {
-        name: 'John Doe',
-        desc: 'blah blah blah',
-        id: '111-111-111'
-      }
-    ],
+    users: [],
     groups: [],
     articles: []
   },

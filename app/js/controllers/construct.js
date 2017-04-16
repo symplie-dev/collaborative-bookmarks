@@ -22,15 +22,15 @@ var construct = {
               break;
             case 'settings':
               console.log('show settings');
-              construct.settings.build();
+              // construct.settings.build();
               break;
             case 'profile':
               console.log('show profile');
-              construct.profile.build();
+              // construct.profile.build();
               break;
             case 'help':
               console.log('show help');
-              construct.help.build();
+              // construct.help.build();
               break;
             default:
               console.error('unhandled switch case');
@@ -49,25 +49,32 @@ var construct = {
         var section = e.target.hasAttribute('section') ? e.target.getAttribute('section') : false
 
         if(section){
+          var result;
+          
           switch (section){
             case 'users':
               console.log('show users');
-              content.innerHTML = construct.users.build();
+              result = construct.users.build();
               break;
             case 'articles':
               console.log('show articles');
-              construct.articles.build();
+              result = construct.articles.build();
               break;
             case 'groups':
               console.log('show groups');
-              construct.groups.build();
+              result = construct.groups.build();
               break;
             default:
               console.error('unhandled switch case');
               console.trace();
               break;
           }
+
+          if(result){
+            content.innerHTML = result;
+          }
         }
+
       }
 
 
