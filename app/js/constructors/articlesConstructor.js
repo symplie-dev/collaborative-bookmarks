@@ -1,3 +1,0 @@
-construct.articles = {
-
-}

@@ -13,10 +13,11 @@
     <title>CeeBee</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bs/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="./css/bs/bootstrap/bootstrap-theme.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="./css/main-style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,45 +28,28 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">CeeBee</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a section="dashboard">Dashboard</a></li>
-            <li><a section="settings">Settings</a></li>
-            <li><a section="profile">Profile</a></li>
-            <li><a section="Help">Help</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!--main-->
+    <div class="container">
 
-    <div class="container-fluid">
-      <div class="row">
-        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li><a section="dashboard">Dashboard</a></li>
-            <li><a section="articles">Articles</a></li>
-            <li><a section="groups">Groups</a></li>
-            <li><a section="users">Users</a></li>
-            <li><a section="analytics">Analytics</a></li>
-            <li><a section="export">Export</a></li>
-          </ul>
-        </div>
-        <div id="content" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    	<div class="row">
 
+        <!-- <div class="col-md-1"></div> -->
+
+        <div id="sidebar" class="col-md-3">
+          <ul id="groupsList" class="list-group"></ul>
+          <ul id="usersList" class="list-group"></ul>
         </div>
-      </div>
+
+        <div id="content" class="col-md-9"></div>
+
+        <!-- <div class="col-md-1"></div> -->
+
+    	</div>
     </div>
+
+
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -77,26 +61,18 @@
     <script src="./js/config.js"></script>
 
     <script src="./js/controllers/mainController.js"></script>
-    <script src="./js/controllers/constructController.js"></script>
-    <script src="./js/controllers/usersController.js"></script>
-    <script src="./js/controllers/groupsController.js"></script>
-    <script src="./js/controllers/articlesController.js"></script>
 
     <script src="./js/constructors/mainConstructor.js"></script>
-    <script src="./js/constructors/usersConstructor.js"></script>
-    <script src="./js/constructors/groupsConstructor.js"></script>
-    <script src="./js/constructors/articlesConstructor.js"></script>
+    <script src="./js/constructors/views/cards/bookmarkCard.js"></script>
+    <script src="./js/constructors/views/lists/groupsList.js"></script>
 
     <script src="./js/services/networkService.js"></script>
     <script src="./js/services/mainService.js"></script>
 
-    <script src="./js/data/modelData.js"></script>
-    <script src="./js/data/viewData.js"></script>
+    <script src="./js/data/data.js"></script>
 
     <script src="./js/main.js"></script>
-    <script src="./js/load.js"></script>
 
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="./js/libs/holder.min.js"></script>
+    <script src="./js/load.js"></script>
   </body>
 </html>

@@ -3,26 +3,32 @@
   "data" : [{
     "name": "John Doe",
     "desc": "blah blah blah",
+    "img":"./assets/images/headshot.jpg",
     "id": "111-111-111"
   },{
     "name": "John Doe",
     "desc": "blah blah blah",
+    "img":"./assets/images/headshot.jpg",
     "id": "111-111-111"
   },{
     "name": "John Doe",
     "desc": "blah blah blah",
+    "img":"./assets/images/headshot.jpg",
     "id": "111-111-111"
   },{
     "name": "John Doe",
     "desc": "blah blah blah",
+    "img":"./assets/images/headshot.jpg",
     "id": "111-111-111"
   },{
     "name": "John Doe",
     "desc": "blah blah blah",
+    "img":"./assets/images/headshot.jpg",
     "id": "111-111-111"
   },{
     "name": "John Doe",
     "desc": "blah blah blah",
+    "img":"./assets/images/headshot.jpg",
     "id": "111-111-111"
   }]
 }

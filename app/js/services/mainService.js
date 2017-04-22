@@ -1,28 +1,16 @@
-var services = {};
+var service = {};
 
-services.users = {
+service.users = {
   update: function(){
-    return data.users;
-  },
-  getAll: function(){
     network.get({
       url: '/users',
       callbacks: {
-        success: function(data){
-          console.log(data);
-        },
-        error: function(){
-          console.error('error loading');
-        }
-      }
-    });
-  },
-  get: function(id){
-    network.get({
-      url: '/user/' + id,
-      callbacks: {
-        success: function(data){
-          // data.set('users', data)
+        success: function(d){
+          data.users = d;
+
+          if(callback){
+            callback();
+          }
         },
         error: function(){
           console.error('error loading');
@@ -32,26 +20,17 @@ services.users = {
   }
 };
 
-services.groups = {
-  getGroups: function(){
+service.bookmarks = {
+  update: function(callback){
     network.get({
-      url: '/groups/' + id,
+      url: '/bookmarks',
       callbacks: {
-        success: function(data){
-          data.set('groups', data)
-        },
-        error: function(){
-          console.error('error loading');
-        }
-      }
-    });
-  },
-  getGroup: function(id){
-    network.get({
-      url: '/groups/' + id,
-      callbacks: {
-        success: function(data){
-          // data.set('groups', data)
+        success: function(d){
+          data.bookmarks = d;
+
+          if(callback){
+            callback();
+          }
         },
         error: function(){
           console.error('error loading');
@@ -61,26 +40,17 @@ services.groups = {
   }
 };
 
-services.articles = {
-  getArticles: function(){
+service.groups = {
+  update: function(callback){
     network.get({
-      url: '/articles/',
+      url: '/groups',
       callbacks: {
-        success: function(data){
-          data.set('articles', data)
-        },
-        error: function(){
-          console.error('error loading');
-        }
-      }
-    });
-  },
-  getArticle: function(id){
-    network.get({
-      url: '/articles/' + id,
-      callbacks: {
-        success: function(data){
-          // data.set('users', data)
+        success: function(d){
+          data.groups = d;
+
+          if(callback){
+            callback();
+          }
         },
         error: function(){
           console.error('error loading');

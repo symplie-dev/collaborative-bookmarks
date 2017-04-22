@@ -1,5 +1,7 @@
 (function(){
-  network.users.getUsers();
-  network.groups.getGroups();
-  network.articles.getArticles();
-})
+  service.bookmarks.update(
+    service.groups.update(
+      construct.init
+    )
+  );
+})();
