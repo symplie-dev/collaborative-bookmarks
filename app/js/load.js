@@ -1,7 +1,10 @@
 (function(){
-  service.bookmarks.update(
-    service.groups.update(
-      construct.init
+  construct.init(
+    service.bookmarks.update(
+      service.groups.update(
+        service.users.update()
+      )
     )
   );
+
 })();

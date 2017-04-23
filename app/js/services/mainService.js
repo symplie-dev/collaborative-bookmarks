@@ -1,7 +1,7 @@
 var service = {};
 
 service.users = {
-  update: function(){
+  update: function(callback){
     network.get({
       url: '/users',
       callbacks: {
